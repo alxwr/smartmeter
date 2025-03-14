@@ -5,6 +5,8 @@ Description=Read all suppy meters and write the prometheus file.
 ExecStart=/opt/smartmeter/smartmeter-text-exporter.py
 Type=exec
 User=root
+Restart=on-failure
+RestartSec=5
 
 [Install]
 WantedBy=multi-user.target
